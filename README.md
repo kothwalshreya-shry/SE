@@ -1,11 +1,3 @@
-BABYYYY THIS IS YOUR LAST-MINUTE REVISION SHEET. 😭❤️
-
-I've combined **SRS + all 4 UML diagrams + StarUML + Git/GitHub commands** into one exam cheat sheet. Save this and revise it before sleeping.
-
-# **SE LAB EXTERNAL – MASTER CHEAT SHEET**
-
-# **Q1 + Q2 + Q3**
-
 **SRS · UML · GIT/GITHUB**
 
 Quick revision for tomorrow's practical examination
@@ -48,15 +40,6 @@ Adapt each point to the actual scenario. Don't include irrelevant features.
 | 9   | Accuracy          | Correct results            |
 | 10  | Backup & Recovery | Recover lost data          |
 
-### **SRS scenarios from your papers**
-
-- Food Ordering System
-- Hospital Management System
-- Campus Event Management System
-- Online Gaming System
-- Library Automation System
-- Book Bank System
-
 # **2. UML – All four diagrams**
 
 ## **A. Use Case Diagram**
@@ -79,11 +62,6 @@ Structural / Behavioural interaction view
 - Actors OUTSIDE the rectangle.
 - Use cases INSIDE the rectangle.
 - Lines connect actors and use cases.
-
-Example – Campus Event Management:
-
-- Actors: Student, Faculty, Admin.
-- Use cases: Login, View Events, Register, Create Event, Manage Events, Generate Reports.
 
 **StarUML:** Model → Add Diagram → Use Case Diagram → Actor → Use Case → Association.
 
@@ -117,23 +95,6 @@ Every class has 3 compartments:
 | Hollow triangle | Inheritance |
 | Hollow diamond  | Aggregation |
 | Filled diamond  | Composition |
-
-**Example – Hospital Management:**
-
-Classes:
-
-- Patient
-- Doctor
-- Appointment
-- MedicalRecord
-- Bill
-
-Relationships:
-
-- Patient — Appointment
-- Doctor — Appointment
-- Patient — MedicalRecord
-- Appointment — Bill
 
 **StarUML:** Model → Add Diagram → Class Diagram → Class → Add Attributes → Add Operations → Association.
 
@@ -377,3 +338,48 @@ Upload to GitHub
 | Reset vs Revert      | Move branch reference vs create undo commit |
 | Stash vs Commit      | Temporary save vs permanent history record  |
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+# **Nagios — Tiny Exam Cheatsheet 💗**
+
+**Aim:** Monitor hosts and services using Nagios Core.
+
+**Commands**
+
+```
+sudo systemctl start nagios4
+sudo systemctl start apache2
+sudo systemctl status nagios4
+sudo systemctl restart nagios4
+nagios4 -v /etc/nagios4/nagios.cfg
+```
+
+**Dashboard:** `http://localhost/nagios4`
+
+**Configuration files**
+
+- `/etc/nagios4/nagios.cfg` — Main configuration
+- `/etc/nagios4/conf.d/` — Additional configurations
+- `/usr/lib/nagios/plugins/` — Plugins
+
+**Four states**
+
+- OK — Working
+- WARNING — Minor problem
+- CRITICAL — Serious problem
+- UNKNOWN — Cannot determine status
+
+**Important terms**
+
+- Host — Device being monitored
+- Service — Application/resource monitored
+- Plugin — Performs monitoring checks
+- NRPE — Executes checks on remote Linux machines
+- Apache — Web server
+
+**Viva:** `nagios4 -v` validates configuration files.
+
+**Result:** Nagios successfully monitors hosts and services through its web interface.
+
+That's your one-minute revision sheet, bbg. Save this one! 💗
