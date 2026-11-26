@@ -937,3 +937,37 @@ kubectl get services
 Expected result
 
 Deployment successfully scaled from 2 replicas to 4 replicas.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+## **Nagios + Docker – Tiny Cheatsheet 💗**
+
+**Aim:** Run Nagios Core inside Docker to monitor hosts and services.
+
+**Commands:**
+
+```
+docker pull jasonrivers/nagios:latest
+
+docker run --name nagios -d -p 8082:80 jasonrivers/nagios:latest
+
+docker ps
+
+docker logs nagios
+
+docker exec -it nagios sh
+```
+
+**Inside container – validate configuration:**
+
+```
+/opt/nagios/bin/nagios -v /opt/nagios/etc/nagios.cfg
+```
+
+**Dashboard:**
+
+```
+http://localhost:8082
+```
+
